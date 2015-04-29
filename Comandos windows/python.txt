@@ -1,0 +1,36 @@
+PYTHON
+Instalar python 2.7
+	https://www.python.org/downloads/
+
+PIP
+Baixar o arquivo:
+	https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py
+Rodar como administrador:
+	python get-pip.py
+	
+VIRTUALENV e VIRTUALENVWRAPPER
+pip install virtualenv
+pip install virtualenvwrapper-win
+easy_install virtualenvwrapper-win
+
+VIRTUALENVWRAPPER TUTORIAL
+https://pypi.python.org/pypi/virtualenvwrapper-win
+
+POSTGRESSQL
+Instalar postgres:
+	http://www.enterprisedb.com/products-services-training/pgdownload#windows
+	Lembre-se de instalar o servidor no stack builder
+Instalar port da win-psycopg
+	http://www.stickpeople.com/projects/python/win-psycopg/
+
+MONGODB
+Instalar mongodb:
+	https://www.mongodb.org/downloads
+Criar pasta para arquivos de log:
+	md D:\MongoDb\log
+Criar pasta para arquivos de dados:
+	md D:\MongoDb\data
+Criar arquivo de configuracoes basicas do mongo
+	 d: && cd MongoDb && echo "logpath=D:\MongoDb\log\mongo.log" >> mongod.cfg && echo "dbpath=D:\MongoDb\data\" >> mongod.cfg
+Rodar comando abaixo para criar o serviço de start automático para o mongo
+	sc.exe create MongoDB binPath= "\"C:\Program Files\MongoDB\Server\3.0\bin\mongod.exe\" --service --config=\"D:\MongoDb\mongod.cfg\"" DisplayName= "MongoDB 3.0 Standard" start= "auto"
