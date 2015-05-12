@@ -1,0 +1,20 @@
+sudo apt-get update
+sudo apt-get install mariadb-server libmariadbclient-dev libssl-dev
+
+To access mysql terminal use: mysql -u root -p
+
+CREATE DATABASE salao_na_mao_develop CHARACTER SET UTF8;
+CREATE USER develop_salao@localhost IDENTIFIED BY '010203';
+GRANT ALL PRIVILEGES ON salao_na_mao.* TO develop_salao@localhost;
+
+pip install mysqlclient
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'myproject',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
